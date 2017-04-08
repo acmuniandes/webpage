@@ -1,0 +1,19 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "a webpage for acm",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acmuniandes/webpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acmuniandes/webpage/issues"
+  },
+  "homepage": "https://github.com/acmuniandes/webpage#readme"
+}
