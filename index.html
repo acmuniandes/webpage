@@ -1,20 +1,80 @@
 <html>
 
 <head>
-    <script src="https://unpkg.com/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
+
+    <script id=bienvenida-template type="text/x-template">
+      <div>
+          <div align="center">
+            <h2>
+              ACM
+            </h2>
+            <h3>
+             Universidad de Los Andes
+            </h3>
+          </div>
+      </div>
+    </script>
+
+    <script>
+      Vue.component('bienvenida',{
+        template: '#bienvenida-template',
+        props: []
+      })
+    </script>
 </head>
 
 <body>
-  <title="ACM - Universidad de Los Andes">
-  <div id=app>
-    <h1>Bienvenido a ACM - Universidad de Los Andes</h1>
-  </div>
+    <title>ACM Universidad de Los Andes</title>
+    <v-app id="app" left-fixed-sidebar>
+        <bienvenida></bienvenida>
+        <!-- <v-toolbar style="height:10%">
+            <v-toolbar-side-icon @click.native.stop="nav2 = !nav2" />
+            <v-toolbar-logo>Toolbar</v-toolbar-logo>
+        </v-toolbar>
+        <main>
+            <v-sidebar left fixed drawer v-model="nav2">
+                <v-list>
+                    <v-list-item v-for="i in 3" :key="i">
+                        <v-list-tile>
+                            <v-list-tile-title>Item {{ i }}</v-list-tile-title>
+                        </v-list-tile>
+                    </v-list-item>
+                </v-list>
+            </v-sidebar>
+            <v-content>
+                <v-container fluid>
+                    <div class="title">Main Content</div>
+                    <div v-if=''>
+                        <h2 style="color:">Bienvenido a ACM </h2>
+                        <h4>Universidad de Los Andes</h4>
+                        <img style="width:30%" src='//tei.acm.org/2016/images/acm.png'>
+                        <div name=noticias>
+                            <ul>
+                                <li v-for="noticia in noticias">
+                                    <h3>{{noticia}}</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>CONTENIDO 2</div>
+                    <div>CONTENIDO 3</div>
+                </v-container>
+            </v-content>
+        </main> -->
+    </v-app>
+
     <script>
         var app = new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue!'
+                message: 'Hello Vue!',
+                noticias: ["noticia1", "noticia2", "noticia3"],
+                nav2: false
             }
         })
     </script>
