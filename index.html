@@ -1,83 +1,122 @@
 <html>
 
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
-    <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
-
-    <script id=bienvenida-template type="text/x-template">
-      <div>
-          <div align="center">
-            <h2>
-              ACM
-            </h2>
-            <h3>
-             Universidad de Los Andes
-            </h3>
-          </div>
-      </div>
-    </script>
-
-    <script>
-      Vue.component('bienvenida',{
-        template: '#bienvenida-template',
-        props: []
-      })
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script>
+Vue.component('bienvenida',{
+  template: '#bienvenida-template',
+  props: []
+})
+</script>
 </head>
 
 <body>
-    <title>ACM Universidad de Los Andes</title>
-    <v-app id="app" left-fixed-sidebar>
-        <bienvenida></bienvenida>
-        <!-- <v-toolbar style="height:10%">
-            <v-toolbar-side-icon @click.native.stop="nav2 = !nav2" />
-            <v-toolbar-logo>Toolbar</v-toolbar-logo>
-        </v-toolbar>
-        <main>
-            <v-sidebar left fixed drawer v-model="nav2">
-                <v-list>
-                    <v-list-item v-for="i in 3" :key="i">
-                        <v-list-tile>
-                            <v-list-tile-title>Item {{ i }}</v-list-tile-title>
-                        </v-list-tile>
-                    </v-list-item>
-                </v-list>
-            </v-sidebar>
-            <v-content>
-                <v-container fluid>
-                    <div class="title">Main Content</div>
-                    <div v-if=''>
-                        <h2 style="color:">Bienvenido a ACM </h2>
-                        <h4>Universidad de Los Andes</h4>
-                        <img style="width:30%" src='//tei.acm.org/2016/images/acm.png'>
-                        <div name=noticias>
-                            <ul>
-                                <li v-for="noticia in noticias">
-                                    <h3>{{noticia}}</h3>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>CONTENIDO 2</div>
-                    <div>CONTENIDO 3</div>
-                </v-container>
-            </v-content>
-        </main> -->
-    </v-app>
+  <title>ACM Uniandes</title>
+  <v-app id="app" left-fixed-sidebar>
+    <div class=container>
+      <div align=center id=header>
+        <h2>ACM Uniandes</h2>
+        <label>Nuestras reuniones son todos los jueves a las 12 30 en el AU 311</label>
+      </div>
 
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello Vue!',
-                noticias: ["noticia1", "noticia2", "noticia3"],
-                nav2: false
-            }
-        })
-    </script>
+      <div align=center>
+        <!-- <div class="github-card" data-github="acmuniandes" data-width="400" data-height="" data-theme="default"> -->
+      </div>
+      <br><br>
+      <div>
+        <div align=center>
+          <h3>Proyectos Actuales:</h3>
+        </div>
+        <div class=container>
+          <div class=row>
+            <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Salones Dsiponibles</span>
+                  <p>Un proyecto para analizar registro y encontrar los salones
+                    disponibles en todo momento para estudiar, cualquier bloque,
+                    cualquier horario</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://github.com/acmuniandes/scraperRegistro">Github</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card teal lighten-2">
+                  <div class="card-content white-text">
+                    <span class="card-title">
+                      Grafos Wikipedia
+                    </span>
+                    <p>Un proyecto que recorre paginas de Wikipedia guardando
+                      sus links y respresentando un grafo con los resultados
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://github.com/acmuniandes/wikipediaScraper">Github</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card red lighten-1">
+                  <div class="card-content white-text">
+                    <span class="card-title">
+                      Login Seneca
+                    </span>
+                    <p>
+                      Un proyecto que simula un navegador para
+                      iniciar sesion automaticamente en Senca
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://github.com/acmuniandes/senecaLogin" style="color:purple">
+                      Github
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="card red">
+                  <div class="card-content white-text">
+                    <span class="card-title">
+                      Pagina Web
+                    </span>
+                    <p>
+                      Esta pagina web, la misma que estas viendo
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://github.com/acmuniandes/senecaLogin" style="color:purple">
+                      Github
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</v-app>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    noticias: ["noticia1", "noticia2", "noticia3"],
+    nav2: false
+  }
+})
+</script>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </body>
 
 
