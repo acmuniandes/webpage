@@ -13,7 +13,7 @@ app.logger.setLevel(logging.DEBUG)
 #     return "/public/index.html"
 
 
-@app.route('/', defaults={'path': 'index.html'})
+@app.route('/', defaults={'path': '/public/index.html'})
 
 @app.route("/<path:path>")
 def serve_file(path):
